@@ -12,6 +12,8 @@ import {
   View
 } from 'react-native';
 
+import AlwaysOn from './src/components/AlwaysOn';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -19,19 +21,17 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-export default class App extends Component<{}> {
+export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          DasAudio!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit App.js
+          To get started, Enter in Your Keywords
         </Text>
-        <Text style={styles.instructions}>
-          {instructions}
-        </Text>
+        <AlwaysOn />
       </View>
     );
   }
